@@ -55,6 +55,26 @@ fieldOptions.iconicUserFields = [
 ]
 fieldOptions.userIconicUserFields = fieldOptions.iconicUserFields
 
+fieldOptions.trafficUserFields = [
+    {
+        name: 'Has Traffic',
+        icon: 'traffic-light' ,
+        link: {
+            type: 'userField',
+            value: 'Has Traffic'
+        }
+    },
+    {
+        name: 'Wants Traffic',
+        icon: 'truck' ,
+        link: {
+            type: 'userField',
+            value: 'Wants Traffic'
+        }
+    }
+]
+fieldOptions.userTrafficUserFields = fieldOptions.trafficUserFields
+
 
 function parseFieldOptions (component, name) {
     var model_name = (name.substring(0, 4) === 'user') ? 'model' : 'user'
