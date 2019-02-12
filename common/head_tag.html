@@ -2,25 +2,6 @@
 
 <script type="text/discourse-plugin" version="0.8.7">
 var fieldOptions = {}
-fieldOptions.trafficUserFields = [
-    {
-        name: 'Has Traffic',
-        icon: 'traffic-light' ,
-        link: {
-            type: 'userField',
-            value: 'Has Traffic'
-        }
-    },
-    {
-        name: 'Wants Traffic',
-        icon: 'truck' ,
-        link: {
-            type: 'userField',
-            value: 'Wants Traffic'
-        }
-    }
-]
-fieldOptions.userTrafficUserFields = fieldOptions.iconicTrafficFields
 fieldOptions.iconicUserFields = [
     {
         name: 'LinkedIn',
@@ -102,11 +83,6 @@ function parseFieldOptions (component, name) {
 }
 api.registerConnectorClass('user-post-names', 'user-card-profile-customization', {
     setupComponent(args, component) {
-        parseFieldOptions(component, 'userTrafficUserFields')
-    }
-})
-api.registerConnectorClass('user-post-names', 'user-card-profile-customization', {
-    setupComponent(args, component) {
         parseFieldOptions(component, 'userIconicUserFields')
     }
 })
@@ -137,18 +113,6 @@ api.modifyClass('component:user-card-contents', {
         {{#each userIconicUserFields as |ic|}}
         {{#if ic.icon}}
         <a href="{{ic.href}}" rel="nofollow" target="_blank" title="{{ic.name}}"><i class="fab fa-{{ic.icon}}"></i></a>
-        {{/if}}
-        {{/each}}
-    </div>
-    {{/if}}
-</script>
-
-<script type='text/x-handlebars' data-template-name='/connectors/user-post-names/user-card-profile-customization'>
-    {{#if userTrafficUserFields}}
-    <div class="iconic-user-fields">
-        {{#each userTrafficUserFields as |tc|}}
-        {{#if tc.icon}}
-        <a href="{{tc.href}}" rel="nofollow" target="_blank" title="{{tc.name}}"><i class="fas fa-{{tc.icon}}"></i></a>
         {{/if}}
         {{/each}}
     </div>
