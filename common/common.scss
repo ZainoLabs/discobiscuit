@@ -1,3 +1,13 @@
+/* hide User Preference links for non admins */
+
+/* >>> STATS */
+
+body:not(.primary-group-adminos) .stats-section {
+  display: none;
+}
+
+
+/* user card */
 .public-user-field.twitter {
   display: none;
 }
