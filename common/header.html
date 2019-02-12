@@ -272,7 +272,33 @@
             {{plugin-outlet name="user-location-and-website" args=(hash model=model)}}
             </h3>
 
-            
+            <h3 class="foo">
+            {{#if model.foo}}
+            ack
+            {{/if}}
+            {{plugin-outlet name="foo" args=(hash model=model)}}
+            </h3>
+
+            <div class='bio'>
+              {{#if model.suspended}}
+                <div class='suspended'>
+                  {{d-icon "ban"}}
+                  <b>
+                    {{#if model.suspendedForever}}
+                      {{i18n 'user.suspended_permanently'}}
+                    {{else}}
+                      {{i18n 'user.suspended_notice' date=model.suspendedTillDate}}
+                    {{/if}}
+                  </b><br>
+                  {{#if model.suspend_reason}}
+                    <b>{{i18n 'user.suspended_reason'}}</b> {{model.suspend_reason}}
+                  {{/if}}
+                </div>
+              {{/if}}
+              {{#if isNotSuspendedOrIsStaff}}
+                {{{model.bio_cooked}}}
+              {{/if}}
+            </div>
 
             {{#if publicUserFields}}
               <div class="public-user-fields">
