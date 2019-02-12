@@ -58,7 +58,7 @@ fieldOptions.userIconicUserFields = fieldOptions.iconicUserFields
 fieldOptions.trafficUserFields = [
     {
         name: 'Has Traffic',
-        icon: 'slack' ,
+        icon: 'traffic-light' ,
         link: {
             type: 'userField',
             value: 'Has Traffic'
@@ -66,7 +66,7 @@ fieldOptions.trafficUserFields = [
     },
     {
         name: 'Wants Traffic',
-        icon: 'google' ,
+        icon: 'truck' ,
         link: {
             type: 'userField',
             value: 'Wants Traffic'
@@ -128,6 +128,15 @@ api.registerConnectorClass('user-card-post-names', 'user-card-profile-customizat
         {{#each userIconicUserFields as |ic|}}
         {{#if ic.icon}}
         <a href="{{ic.href}}" rel="nofollow" target="_blank" title="{{ic.name}}"><i class="fab fa-{{ic.icon}}"></i></a>
+        {{/if}}
+        {{/each}}
+    </div>
+    {{/if}}
+    {{#if userTrafficUserFields}}
+    <div class="iconic-user-fields">
+        {{#each userTrafficUserFields as |tc|}}
+        {{#if tc.icon}}
+        <a href="{{tc.href}}" rel="nofollow" target="_blank" title="{{tc.name}}"><i class="fas fa-{{tc.icon}}"></i></a>
         {{/if}}
         {{/each}}
     </div>
