@@ -106,11 +106,6 @@ function parseFieldOptions (component, name) {
     }).compact())
 }
 
-api.registerConnectorClass('user-post-names', 'user-card-profile-customization', {
-    setupComponent(args, component) {
-        parseFieldOptions(component, 'userTrafficUserFields')
-    }
-})
 
 api.registerConnectorClass('user-post-names', 'user-card-profile-customization', {
     setupComponent(args, component) {
