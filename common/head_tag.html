@@ -119,6 +119,18 @@ api.registerConnectorClass('user-card-post-names', 'user-card-profile-customizat
     }
 })
 
+api.registerConnectorClass('user-post-names', 'user-card-profile-customization', {
+    setupComponent(args, component) {
+        parseFieldOptions(component, 'userTrafficUserFields')
+    }
+})
+
+api.registerConnectorClass('user-card-post-names', 'user-card-profile-customization', {
+    setupComponent(args, component) {
+        parseFieldOptions(component, 'trafficUserFields')
+    }
+})
+
 </script>
 
 <script type='text/x-handlebars' data-template-name='/connectors/user-post-names/user-card-profile-customization'>
