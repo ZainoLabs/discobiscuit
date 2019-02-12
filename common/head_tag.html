@@ -147,6 +147,18 @@ api.modifyClass('component:user-card-contents', {
     {{/if}}
 </script>
 
+<script type='text/x-handlebars' data-template-name='/connectors/user-post-names/user-card-profile-customization'>
+    {{#if userTrafficUserFields}}
+    <div class="iconic-user-fields">
+        {{#each userTrafficUserFields as |tc|}}
+        {{#if tc.icon}}
+        <a href="{{tc.href}}" rel="nofollow" target="_blank" title="{{tc.name}}"><i class="fas fa-{{tc.icon}}"></i></a>
+        {{/if}}
+        {{/each}}
+    </div>
+    {{/if}}
+</script>
+
 <script type='text/x-handlebars' data-template-name='/connectors/user-location-and-website/user-card-profile-customization'>
     {{#if userLocationAndWebsiteUserFields}}
     {{#each userLocationAndWebsiteUserFields as |lw|}}
