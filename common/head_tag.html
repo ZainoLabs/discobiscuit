@@ -167,15 +167,6 @@ api.modifyClass('component:user-card-contents', {
 
 
 
-<script type='text/x-handlebars' data-template-name='/connectors/user-location-and-website/user-card-profile-customization'>
-    {{#if userLocationAndWebsiteUserFields}}
-    {{#each userLocationAndWebsiteUserFields as |lw|}}
-    {{fas-icon lw.icon}}
-    <a href={{lw.href}} rel="nofollow" target="_blank" title="{{lw.name}}">{{lw.link_title}}</a>
-    {{/each}}
-    {{/if}}
-</script>
-
 <script type='text/x-handlebars' data-template-name='/connectors/user-card-post-names/user-card-profile-customization'>
     {{#if iconicUserFields}}
     <div class="iconic-user-fields">
@@ -188,13 +179,3 @@ api.modifyClass('component:user-card-contents', {
     {{/if}}
 </script>
 
-<script type='text/x-handlebars' data-template-name='/connectors/user-card-location-and-website/user-card-profile-customization'>
-    {{#if locationAndWebsiteUserFields}}
-    {{#each locationAndWebsiteUserFields as |lw|}}
-    <span>
-        {{fas-icon lw.icon}}
-        <a href={{lw.href}} rel="nofollow" target="_blank" title="{{lw.name}}">{{lw.link_title}}</a>
-    </span>
-    {{/each}}
-    {{/if}}
-</script>
