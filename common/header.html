@@ -122,12 +122,15 @@
   </div>
 </div>
 
+{{#each userFields as |foo|}}
 <div class="control-group pref-foo">
+  {{user-field field=foo.field value=foo.value}}
   <label class="control-label">Foo</label>
   <div class="controls">
     {{input type="text" value=model.foo class="input-xxlarge"}}
   </div>
 </div>
+{{/each}}
 
 {{#each userFields as |uf|}}
   <div class="control-group">
@@ -293,26 +296,22 @@
               {{/if}}
             </div>
 
-            <div class='foo'>
-              {{#if model.suspended}}
-                <div class='suspended'>
-                  {{d-icon "ban"}}
-                  <b>
-                    {{#if model.suspendedForever}}
-                      {{i18n 'user.suspended_permanently'}}
-                    {{else}}
-                      {{i18n 'user.suspended_notice' date=model.suspendedTillDate}}
-                    {{/if}}
-                  </b><br>
-                  {{#if model.suspend_reason}}
-                    <b>{{i18n 'user.suspended_reason'}}</b> {{model.suspend_reason}}
+            {{#if publicUserFields}}
+              <div class="public-user-fields">
+                {{#each publicUserFields as |foo|}}
+                  {{#if foo.value}}
+                    <div class="public-user-field {{foo.field.dasherized_name}}">
+                      <span class="user-field-name">{{foo.field.name}}</span>:
+                      <span class="user-field-value">{{foo.value}}</span>
+                    </div>
                   {{/if}}
-                </div>
-              {{/if}}
-              {{#if isNotSuspendedOrIsStaff}}
-                {{{model.foo_cooked}}}
-              {{/if}}
-            </div>
+                {{/each}}
+
+                {{plugin-outlet name="user-profile-public-fields"
+                                args=(hash publicUserFields=publicUserFields
+                                      model=model)}}
+              </div>
+            {{/if}}
 
             {{#if publicUserFields}}
               <div class="public-user-fields">
