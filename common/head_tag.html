@@ -2,6 +2,27 @@
 
 <script type="text/discourse-plugin" version="0.8.7">
 var fieldOptions = {}
+
+fieldOptions.trafficUserFields = [
+    {
+        name: 'Has Traffic',
+        icon: 'traffic-light' ,
+        link: {
+            type: 'userField',
+            value: 'Has Traffic'
+        }
+    },
+    {
+        name: 'Wants Traffic',
+        icon: 'truck' ,
+        link: {
+            type: 'userField',
+            value: 'Wants Traffic'
+        }
+    }
+]
+fieldOptions.userTrafficUserFields = fieldOptions.iconicTrafficFields
+
 fieldOptions.iconicUserFields = [
     {
         name: 'LinkedIn',
