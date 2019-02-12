@@ -91,7 +91,35 @@ fieldOptions.locationAndWebsiteUserFields = [
 ]
 fieldOptions.userLocationAndWebsiteUserFields = fieldOptions.locationAndWebsiteUserFields
 
-
+function parseFieldOptions (component, name) {
+    var model_name = (name.substring(0, 4) === 'user') ? 'model' : 'user'
+    var options = fieldOptions[name]
+    const siteUserFields = component.site.get('user_fields')
+    const userFields = component.get(model_name  + '.user_fields')
+    component.set(name, options.map(field => {
+        var base = field.link.base || ''
+        if (field.link.type === 'thisGetUser') {
+            if (field.link.value === 'website') component.set(model_name + '.website_name', false)
+            Ember.set(field, 'href', base + (component.get(model_name + '.' + field.link.value) || ''))
+        } else if (field.link.type === 'userField') {
+            var siteUserField = siteUserFields.filterBy('name', field.link.value)[0]
+            if (siteUserField) {
+                Ember.set(field, 'href', base + (userFields[siteUserField.get('id')] || ''))
+            } else {
+                return null
+            }
+        }
+        if (field.title && field.title.type === 'userField') {
+            var siteUserField = siteUserFields.filterBy('name', field.title.value)[0]
+            if (siteUserField) {
+                Ember.set(field, 'link_title', userFields[siteUserField.get('id')])
+            } else {
+                return null
+            }
+        }
+        return field.href ? field : null
+    }).compact())
+}
 
 api.registerConnectorClass('user-post-names', 'user-card-profile-customization', {
     setupComponent(args, component) {
