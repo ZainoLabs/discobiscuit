@@ -123,9 +123,13 @@ api.registerConnectorClass('user-card-post-names', 'user-card-profile-customizat
 </script>
 
 <script type='text/x-handlebars' data-template-name='/connectors/user-post-names/user-card-profile-customization'>
-    {{#if userTrafficUserFields}}
-    <div class="traffic-user-fields">
-        <h1>F00</h1>
+    {{#if userIconicUserFields}}
+    <div class="iconic-user-fields">
+        {{#each userIconicUserFields as |ic|}}
+        {{#if ic.icon}}
+        <a href="{{ic.href}}" rel="nofollow" target="_blank" title="{{ic.name}}"><i class="fab fa-{{ic.icon}}"></i></a>
+        {{/if}}
+        {{/each}}
     </div>
     {{/if}}
 </script>
