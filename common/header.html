@@ -302,8 +302,8 @@
                 {{#each publicUserFields as |uf|}}
                   {{#if uf.value}}
                     <div class="public-user-field {{uf.field.dasherized_name}}">
-                      <span class="user-field-name">{{uf.field.name}}</span>:
-                      <span class="user-field-value">{{uf.value}}</span>
+                      <span class="user-field-name">{{uf.field.name}}</span>
+                      <span class="user-field-value"><i class="fas fa-check"></i></span>
                     </div>
                   {{/if}}
                 {{/each}}
