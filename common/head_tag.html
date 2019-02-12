@@ -90,6 +90,7 @@ fieldOptions.locationAndWebsiteUserFields = [
     }
 ]
 fieldOptions.userLocationAndWebsiteUserFields = fieldOptions.locationAndWebsiteUserFields
+
 function parseFieldOptions (component, name) {
     var model_name = (name.substring(0, 4) === 'user') ? 'model' : 'user'
     var options = fieldOptions[name]
@@ -165,16 +166,6 @@ api.modifyClass('component:user-card-contents', {
 </script>
 
 
-
-<script type='text/x-handlebars' data-template-name='/connectors/user-location-and-website/user-card-profile-customization'>
-    {{#if userLocationAndWebsiteUserFields}}
-    {{#each userLocationAndWebsiteUserFields as |lw|}}
-    {{fab-icon lw.icon}}
-    <a href={{lw.href}} rel="nofollow" target="_blank" title="{{lw.name}}">{{lw.link_title}}</a>
-    {{/each}}
-    {{/if}}
-</script>
-
 <script type='text/x-handlebars' data-template-name='/connectors/user-card-post-names/user-card-profile-customization'>
     {{#if iconicUserFields}}
     <div class="iconic-user-fields">
@@ -187,13 +178,3 @@ api.modifyClass('component:user-card-contents', {
     {{/if}}
 </script>
 
-<script type='text/x-handlebars' data-template-name='/connectors/user-card-location-and-website/user-card-profile-customization'>
-    {{#if locationAndWebsiteUserFields}}
-    {{#each locationAndWebsiteUserFields as |lw|}}
-    <span>
-        {{fab-icon lw.icon}}
-        <a href={{lw.href}} rel="nofollow" target="_blank" title="{{lw.name}}">{{lw.link_title}}</a>
-    </span>
-    {{/each}}
-    {{/if}}
-</script>
