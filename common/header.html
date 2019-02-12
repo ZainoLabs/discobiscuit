@@ -122,15 +122,15 @@
   </div>
 </div>
 
-{{#each userFields as |foo|}}
-<div class="control-group pref-foo">
-  {{user-field field=foo.field value=foo.value}}
+
+<div class="control-group pref-food">
+  {{user-field field=food.field value=food.value}}
   <label class="control-label">Food</label>
   <div class="controls">
-    {{input type="text" value=model.foo class="input-xxlarge"}}
+    {{input type="text" value=model.food class="input-xxlarge"}}
   </div>
 </div>
-{{/each}}
+
 
 {{#each userFields as |uf|}}
   <div class="control-group">
