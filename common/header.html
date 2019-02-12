@@ -98,6 +98,9 @@
 </script>-->
 
 <!-- update template: preferences/interface - removed private option -->
+<script type="text/x-handlebars" data-template-name="preferences/profile">
+<h1>foo</h1>
+  </script>
 
 <script type="text/x-handlebars" data-template-name="user">
 <div class="container {{if viewingSelf 'viewing-self'}}">
@@ -220,9 +223,6 @@
             </div>
 
             {{#if publicUserFields}}
-            <div class="public-user-field twitter">
-              foo
-            </div>
               <div class="public-user-fields">
                 {{#each publicUserFields as |uf|}}
                   {{#if uf.value}}
