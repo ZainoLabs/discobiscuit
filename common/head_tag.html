@@ -21,7 +21,7 @@ fieldOptions.trafficUserFields = [
         }
     }
 ]
-fieldOptions.userTrafficUserFields = fieldOptions.iconicTrafficFields
+fieldOptions.userTrafficUserFields = fieldOptions.trafficUserFields
 
 fieldOptions.iconicUserFields = [
     {
@@ -58,6 +58,7 @@ fieldOptions.iconicUserFields = [
     }
 ]
 fieldOptions.userIconicUserFields = fieldOptions.iconicUserFields
+
 fieldOptions.locationAndWebsiteUserFields = [
     {
         name: 'Organization',
@@ -147,7 +148,13 @@ api.modifyClass('component:user-card-contents', {
     {{/if}}
 </script>
 
-
+<script type='text/x-handlebars' data-template-name='/connectors/user-post-names/user-card-profile-customization'>
+    {{#if userTrafficUserFields}}
+    <div class="traffic-user-fields">
+        <h1>FOO</h1>
+    </div>
+    {{/if}}
+</script>
 
 <script type='text/x-handlebars' data-template-name='/connectors/user-location-and-website/user-card-profile-customization'>
     {{#if userLocationAndWebsiteUserFields}}
