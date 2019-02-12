@@ -132,25 +132,13 @@ api.registerConnectorClass('user-post-names', 'user-card-profile-customization',
         parseFieldOptions(component, 'userIconicUserFields')
     }
 })
-api.registerConnectorClass('user-location-and-website', 'user-card-profile-customization', {
-    setupComponent(args, component) {
-        parseFieldOptions(component, 'userLocationAndWebsiteUserFields')
-    }
-})
+
 api.registerConnectorClass('user-card-post-names', 'user-card-profile-customization', {
     setupComponent(args, component) {
         parseFieldOptions(component, 'iconicUserFields')
     }
 })
-api.registerConnectorClass('user-card-location-and-website', 'user-card-profile-customization', {
-    setupComponent(args, component) {
-        component.set('hasLocationOrWebsite', true)
-        parseFieldOptions(component, 'locationAndWebsiteUserFields')
-    }
-})
-api.modifyClass('component:user-card-contents', {
-  hasLocationOrWebsite: true
-})
+
 </script>
 
 <script type='text/x-handlebars' data-template-name='/connectors/user-post-names/user-card-profile-customization'>
