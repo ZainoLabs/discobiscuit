@@ -290,21 +290,7 @@
               {{/if}}
             </div>
 
-            {{#if publicUserFields}}
-              <div class="public-user-fields">
-                {{#each publicUserFields as |foo|}}
-                  {{#if foo.value}}
-                    <div class="public-user-field {{foo.field.dasherized_name}}">
-                      <span class="user-field-value">{{foo.value}}</span>
-                    </div>
-                  {{/if}}
-                {{/each}}
-
-                {{plugin-outlet name="user-profile-public-fields"
-                                args=(hash publicUserFields=publicUserFields
-                                      model=model)}}
-              </div>
-            {{/if}}
+            
 
             {{#if publicUserFields}}
               <div class="public-user-fields">
