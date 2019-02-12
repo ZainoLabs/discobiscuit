@@ -243,10 +243,10 @@
       </div>
 
       {{#unless collapsedInfo}}
-      <div class='secondary'>
+      <div id="grace" class='secondary'>
         <dl>
          {{#if model.created_at}}
-            
+            <div><dt>{{i18n 'user.created'}}</dt><dd>{{bound-date model.created_at}}</dd></div>
           {{/if}}
           {{#if model.last_posted_at}}
             <div><dt>{{i18n 'user.last_posted'}}</dt><dd>{{bound-date model.last_posted_at}}</dd></div>

@@ -1,6 +1,6 @@
 /* hide User Preference links for non admins */
 
-/* >>> STATS */
+/* >>>SUMMARY / STATS */
 
 body:not(.primary-group-adminos) .stats-section {
   display: none;
@@ -82,4 +82,10 @@ h3.user-card-public-field {
     span.ember-view {
         position: relative !important;
     }
+}
+
+/* user card >>> secondary (meta) */
+
+body:not(.primary-group-adminos) #grace {
+  display: none;
 }
