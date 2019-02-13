@@ -301,13 +301,6 @@
                                       model=model)}}
               </div>
             {{/if}}
-            </div>
-             
-            
-            
-        
-
-
             {{#if publicUserFields}}
               <div id="ucard-g2" class="public-user-fields">
                 {{#each publicUserFields as |uf|}}
@@ -340,6 +333,14 @@
                                       model=model)}}
               </div>
             {{/if}}
+            </div>
+             
+            
+            
+        
+
+
+            
 
             {{plugin-outlet name="user-profile-primary" args=(hash model=model)}}
           </div>
