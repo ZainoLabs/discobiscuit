@@ -338,11 +338,11 @@
              
            
             {{#if publicUserFields}}
-              <div id="ucard-g4" class="public-user-fields">
+              <div class="public-user-fields">
                 {{#each publicUserFields as |uf|}}
                   {{#if uf.value}}
                     <div id="" class="public-user-field {{uf.field.dasherized_name}}">
-                      <span class="user-field-value">{{uf.value}}</span>
+                      <span id="ucard-g4" class="user-field-value"><strong> @ </strong>{{uf.value}}</span>
                     </div>
                   {{/if}}
                 {{/each}}
@@ -357,7 +357,7 @@
                 {{#each publicUserFields as |uf|}}
                   {{#if uf.value}}
                     <div id="" class="public-user-field {{uf.field.dasherized_name}}">
-                      <span class="user-field-value">{{uf.value}}<strong>@</strong></span>
+                      <span class="user-field-value">{{uf.value}}</span>
                     </div>
                   {{/if}}
                 {{/each}}
