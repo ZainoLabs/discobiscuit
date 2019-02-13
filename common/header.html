@@ -129,15 +129,6 @@
   </div>
 </div>
 
-<div class="control-group pref-check1">
-  <label class="control-label">I like beer</label>
-  <div class="controls">
-    {{input type="checkbox" name="check1" value="true" class="input-xxlarge"}}
-  </div>
-</div>
-
-
-
 {{#each userFields as |uf|}}
   <div class="control-group">
     {{user-field field=uf.field value=uf.value}}
@@ -303,7 +294,8 @@
             </div>
 
           /* User Card Group 1 */
-
+             
+             <div class="alert alert-secondary">
             {{#if publicUserFields}}
               <div id="ucard-g1" class="public-user-fields alert alert-primary">
                 {{#each publicUserFields as |uf|}}
@@ -321,9 +313,12 @@
                                       model=model)}}
               </div>
             {{/if}}
+          </div>
+
+             /* User Card Group 2 */
 
             {{#if publicUserFields}}
-              <div id="cs2" class="public-user-fields">
+              <div id="usercard-g2" class="public-user-fields">
                 {{#each publicUserFields as |uf|}}
                   {{#if uf.value}}
                     <div class="public-user-field {{uf.field.dasherized_name}}">
