@@ -388,9 +388,10 @@
             </dd>
             </div>
           {{/if}}
-
+          
+          <div id="grace">
           {{#if model.displayGroups}}
-            <div id="grace"><dt class="groups">{{i18n 'groups.title' count=model.displayGroups.length}}</dt>
+            <div><dt class="groups">{{i18n 'groups.title' count=model.displayGroups.length}}</dt>
             <dd class='groups'>
               {{#each model.displayGroups as |group|}}
                 <span>{{#link-to 'group' group.name class="group-link"}}{{group.name}}{{/link-to}}</span>
@@ -402,6 +403,7 @@
             </dd>
             </div>
           {{/if}}
+        </div>
 
           {{#if canDeleteUser}}
             <div>{{d-button action=(action "adminDelete") icon="exclamation-triangle" label="user.admin_delete" class="btn-danger"}}</div>
