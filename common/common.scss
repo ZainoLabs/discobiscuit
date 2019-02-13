@@ -9,13 +9,50 @@
     padding-left: 10px;
 }
 
-#cs1 .has-traffic {
+/* User Card Group 1 */
+
+#ucard-g1 .has-traffic {
     display: none;
 }
 
-#cs1 .wants-traffic {
+#ucard-g1 .wants-traffic {
     display: none;
 }
+
+#ucard-g1 .company {
+    display: none;
+}
+
+#ucard-g1 .role {
+    display: none;
+}
+
+#ucard-g1 .advertiser {
+    display: none;
+}
+
+#ucard-g1 .agency-opm {
+    display: none;
+}
+
+#ucard-g1 .affiliate-manager {
+    display: none;
+}
+
+#ucard-g1 .service-provider {
+    display: none;
+}
+
+#ucard-g1 .marketing-pro {
+    display: none;
+}
+
+#ucard-g1 .none-of-the-above {
+    display: none;
+}
+
+
+/* User Card Group 2 */
 
 #cs2 .has-traffic {
     color: blue;
