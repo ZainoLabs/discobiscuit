@@ -307,10 +307,28 @@
 </div>
 
             {{#if publicUserFields}}
-              <div class="public-user-fields">
+              <div id="cs1" class="public-user-fields">
                 {{#each publicUserFields as |uf|}}
                   {{#if uf.value}}
-                    <div class="public-user-field {{uf.field.looking-for}}">
+                    <div class="public-user-field {{uf.field.dasherized_name}}">
+                      <span class="user-field-value"><i class="fas fa-check" style="color: green;"></i></span>
+                      <span class="user-field-name">{{uf.field.name}}</span>
+                      <span class="user-field-value">{{uf.value}}</span>
+                    </div>
+                  {{/if}}
+                {{/each}}
+
+                {{plugin-outlet name="user-profile-public-fields"
+                                args=(hash publicUserFields=publicUserFields
+                                      model=model)}}
+              </div>
+            {{/if}}
+
+            {{#if publicUserFields}}
+              <div id="cs2" class="public-user-fields">
+                {{#each publicUserFields as |uf|}}
+                  {{#if uf.value}}
+                    <div class="public-user-field {{uf.field.dasherized_name}}">
                       <span class="user-field-value"><i class="fas fa-check" style="color: green;"></i></span>
                       <span class="user-field-name">{{uf.field.name}}</span>
                       <span class="user-field-value">{{uf.value}}</span>
