@@ -285,6 +285,21 @@
                 {{{model.bio_cooked}}}
               {{/if}}
               {{#if publicUserFields}}
+              <div id="ucard-g4" class="public-user-fields">
+                {{#each publicUserFields as |uf|}}
+                  {{#if uf.value}}
+                    <div id="" class="public-user-field {{uf.field.dasherized_name}}">
+                      <span class="small"><i class="fas fa-certificate"></i>   {{uf.field.name}}</span>
+                    </div>
+                  {{/if}}
+                {{/each}}
+
+                {{plugin-outlet name="user-profile-public-fields"
+                                args=(hash publicUserFields=publicUserFields
+                                      model=model)}}
+              </div>
+            {{/if}}
+              {{#if publicUserFields}}
               <div id="ucard-g1" class="public-user-fields">
                 {{#each publicUserFields as |uf|}}
                   {{#if uf.value}}
