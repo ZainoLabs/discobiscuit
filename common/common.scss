@@ -46,26 +46,52 @@
 
 /* User Card Group 2 */
 
-#cs2 .has-traffic {
-    color: blue;
+#ucard-g2 .has-traffic {
 }
 
-.wants-traffic {
-    color: red;
+#ucard-g2 .wants-traffic {
 }
 
-.company {
-    color: red;
+#ucard-g2 .looking-for {
+    display: none;
+}
+
+#ucard-g2 .company {
+    display: none;
+}
+
+#ucard-g2 .role {
+    display: none;
+}
+
+#ucard-g2 .advertiser {
+    display: none;
+}
+
+#ucard-g2 .agency-or-opm {
+    display: none;
+}
+
+#ucard-g2 .affiliate-manager {
+    display: none;
+}
+
+#ucard-g2 .service-provider {
+    display: none;
+}
+
+#ucard-g2 .marketing-pro {
+    display: none;
+}
+
+#ucard-g2 .none-of-the-above {
+    display: none;
 }
 
 
-.role {
-    color: red;
-}
+/* User Card Group 3 */
 
-.advertiser {
-    color: green;
-}
+
 /* hide User Preference links for non admins */
 
 /* >>>SUMMARY / STATS */
