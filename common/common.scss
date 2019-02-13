@@ -7,13 +7,14 @@
     border-color: grey;
     color: black;
     padding-left: 10px;
-    .fa {
-        display: none;
-    }
 }
 
-.has-traffic {
+#cs1.has-traffic {
     color: red;
+}
+
+#cs2.has-traffic {
+    color: blue;
 }
 
 .wants-traffic {
