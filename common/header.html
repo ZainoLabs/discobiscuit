@@ -297,15 +297,14 @@
             {{#if publicUserFields}}
                 {{#each publicUserFields as |uf|}}
                   {{#if uf.value}}
-                  <div id="ucard-g1" class="public-user-fields alert alert-success">
-                    <div class="public-user-field {{uf.field.dasherized_name}}">
+                    <div id="ucard-g1" class="public-user-field alert alert-success{{uf.field.dasherized_name}}">
                       <i class="fas fa-crosshairs pr-3"></i>
                       <span class="user-field-value">Looking for... {{uf.value}}</span>
                     </div>
                       
                   {{/if}}
                 {{/each}}
-                </div>
+
 
                 {{plugin-outlet name="user-profile-public-fields"
                                 args=(hash publicUserFields=publicUserFields
