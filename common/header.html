@@ -295,10 +295,10 @@
              
             
             {{#if publicUserFields}}
-              <div id="ucard-g1" class="public-user-fields">
+              <div id="ucard-g1" class="public-user-fields alert alert-grey">
                 {{#each publicUserFields as |uf|}}
                   {{#if uf.value}}
-                    <div class="public-user-field{{uf.field.dasherized_name}}">
+                    <div class="public-user-field {{uf.field.dasherized_name}}">
                       <i class="fas fa-crosshairs pr-3"></i>
                       <span class="user-field-value">{{uf.value}}</span>
                     </div>
