@@ -43,7 +43,7 @@ fieldOptions.trafficUserFields = [
     {
         name: 'Has Traffic',
         icon: 'traffic-light' ,
-        link: {
+        span: {
             type: 'userField',
             value: 'Has Traffic'
         }
@@ -51,7 +51,7 @@ fieldOptions.trafficUserFields = [
     {
         name: 'Wants Traffic',
         icon: 'truck' ,
-        link: {
+        span: {
             type: 'userField',
             value: 'Wants Traffic'
         }
@@ -117,6 +117,17 @@ api.registerConnectorClass('user-card-post-names', 'user-card-profile-customizat
     </div>
     {{/if}}
 </script>
+
+<script type='text/x-handlebars' data-template-name='/connectors/user-post-names/user-card-profile-customization'>
+    {{#if userTrafficUserFields}}
+    <div class="traffic-user-fields">
+        {{#each userTrafficUserFields as |tc|}}
+        <span>foo</span>
+        {{/each}}
+    </div>
+    {{/if}}
+</script>
+
 
 
 <script type='text/x-handlebars' data-template-name='/connectors/user-card-post-names/user-card-profile-customization'>
