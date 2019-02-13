@@ -298,9 +298,9 @@
               <div id="ucard-g1" class="public-user-fields">
                 {{#each publicUserFields as |uf|}}
                   {{#if uf.value}}
-                    <div class="public-user-field {{uf.field.dasherized_name}}">
+                    <div class="public-user-field alert alert-grey{{uf.field.dasherized_name}}">
                       <i class="fas fa-crosshairs pr-3"></i>
-                      <span class="user-field-value">{{uf.value}}</span>
+                      <span class="user-field-value"><em>Looking for...</em> {{uf.value}}</span>
                     </div>
                   {{/if}}
                 {{/each}}
