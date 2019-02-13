@@ -342,7 +342,7 @@
                 {{#each publicUserFields as |uf|}}
                   {{#if uf.value}}
                     <div id="" class="public-user-field {{uf.field.dasherized_name}}">
-                      <span class="small"><i class="fas fa-certificate"></i>   {{uf.field.name}}</span>
+                      <span class="user-field-value">{{uf.value}}</span>
                     </div>
                   {{/if}}
                 {{/each}}
