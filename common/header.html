@@ -389,7 +389,7 @@
             </div>
           {{/if}}
           
-          <div id="grace">
+        
           {{#if model.displayGroups}}
             <div><dt class="groups">{{i18n 'groups.title' count=model.displayGroups.length}}</dt>
             <dd class='groups'>
@@ -403,7 +403,7 @@
             </dd>
             </div>
           {{/if}}
-        </div>
+    
 
           {{#if canDeleteUser}}
             <div>{{d-button action=(action "adminDelete") icon="exclamation-triangle" label="user.admin_delete" class="btn-danger"}}</div>
