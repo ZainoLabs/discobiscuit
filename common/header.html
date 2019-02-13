@@ -339,49 +339,7 @@
            
      
 
-     <div>
-      <span>
-        {{#if publicUserFields}}
-              
-              <div id="ucard-g4" class="public-user-fields">
-                {{#each publicUserFields as |uf|}}
-                  {{#if uf.value}}
-                    <div id="" class="public-user-field {{uf.field.role}}">
-                      <span  class="user-field-value">{{uf.value}}<strong> @ </strong></span>
-                    </div>
-                    <div id="" class="public-user-field {{uf.field.company}}">
-                      <span  class="user-field-value">{{uf.value}}<strong> @ </strong></span>
-                    </div>
-                  {{/if}}
-                {{/each}}
-
-                {{plugin-outlet name="user-profile-public-fields"
-                                args=(hash publicUserFields=publicUserFields
-                                      model=model)}}
-              </div>
-
-
-              
-            {{/if}}
-      </span><span>
-{{#if publicUserFields}}
-              <div id="ucard-g5" class="public-user-fields">
-                {{#each publicUserFields as |uf|}}
-                  {{#if uf.value}}
-                    <div id="" class="public-user-field {{uf.field.dasherized_name}}">
-                      <span class="user-field-value">{{uf.value}}</span>
-                    </div>
-                  {{/if}}
-                {{/each}}
-
-                {{plugin-outlet name="user-profile-public-fields"
-                                args=(hash publicUserFields=publicUserFields
-                                      model=model)}}
-              </div>
-            {{/if}}
-      </span>
-
-     </div>
+     
 
 
             
