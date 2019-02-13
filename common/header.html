@@ -322,7 +322,26 @@
                 {{#each publicUserFields as |uf|}}
                   {{#if uf.value}}
                     <div id="g2-badges" class="public-user-field {{uf.field.dasherized_name}}">
-                      <span class="badge badge-dark">{{uf.field.name}}</span>
+                      <span class="badge badge-dark small">{{uf.field.name}}</span>
+                    </div>
+                  {{/if}}
+                {{/each}}
+
+                {{plugin-outlet name="user-profile-public-fields"
+                                args=(hash publicUserFields=publicUserFields
+                                      model=model)}}
+              </div>
+            {{/if}}
+
+            /* User Card Group 3 */
+
+
+            {{#if publicUserFields}}
+              <div id="ucard-g3" class="public-user-fields">
+                {{#each publicUserFields as |uf|}}
+                  {{#if uf.value}}
+                    <div id="g2-badges" class="public-user-field {{uf.field.dasherized_name}}">
+                      <span class="badge badge-dark small">{{uf.field.name}}</span>
                     </div>
                   {{/if}}
                 {{/each}}
