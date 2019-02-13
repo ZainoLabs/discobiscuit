@@ -284,10 +284,7 @@
               {{#if isNotSuspendedOrIsStaff}}
                 {{{model.bio_cooked}}}
               {{/if}}
-            </div>
-             
-            
-            {{#if publicUserFields}}
+              {{#if publicUserFields}}
               <div id="ucard-g1" class="public-user-fields">
                 {{#each publicUserFields as |uf|}}
                   {{#if uf.value}}
@@ -304,6 +301,10 @@
                                       model=model)}}
               </div>
             {{/if}}
+            </div>
+             
+            
+            
         
 
 
