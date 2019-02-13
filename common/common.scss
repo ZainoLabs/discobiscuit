@@ -10,7 +10,11 @@
 }
 
 #cs1 .has-traffic {
-    color: red;
+    display: none;
+}
+
+#cs1 .wants-traffic {
+    display: none;
 }
 
 #cs2 .has-traffic {
