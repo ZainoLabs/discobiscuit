@@ -401,6 +401,17 @@
 
 <script type="text/x-handlebars" data-template-name="user-card">
   <h1>FOO</h1>
+{{user-card-contents
+  currentPath=application.currentPath
+  topic=topic.model
+  showUser=(action "showUser")
+  togglePosts=(action "togglePosts")
+  createNewMessageViaParams=(route-action "createNewMessageViaParams")}}
 
+{{group-card-contents
+  currentPath=application.currentPath
+  topic=topic.model
+  showUser=(action "showUser")
+  createNewMessageViaParams=(route-action "createNewMessageViaParams")}}
 </script>
 
