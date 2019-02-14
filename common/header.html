@@ -483,22 +483,7 @@
       {{/if}}
     </ul>
 
-    {{plugin-outlet
-      name="user-card-additional-controls"
-      args=(hash user=user close=(action "close"))
-      tagName=""}}
-
-    {{#if user.suspend_reason}}
-      <div class='suspended'>
-        {{d-icon "ban"}}
-        <b>{{i18n 'user.suspended_notice' date=user.suspendedTillDate}}</b><br>
-        <b>{{i18n 'user.suspended_reason'}}</b> {{user.suspend_reason}}
-      </div>
-    {{else}}
-      {{#if user.bio_cooked}}<div class='bio'>{{text-overflow class="overflow" text=user.bio_excerpt}}</div>{{/if}}
-    {{/if}}
-
-    {{#if hasLocationOrWebsite}}
+     {{#if hasLocationOrWebsite}}
       <div class="location-and-website">
         {{#if user.location}}
           <span class='location'>{{d-icon "map-marker"}} <span>{{user.location}}</span></span>
@@ -518,6 +503,23 @@
         {{plugin-outlet name="user-card-location-and-website" args=(hash user=user)}}
       </div>
     {{/if}}
+
+    {{plugin-outlet
+      name="user-card-additional-controls"
+      args=(hash user=user close=(action "close"))
+      tagName=""}}
+
+    {{#if user.suspend_reason}}
+      <div class='suspended'>
+        {{d-icon "ban"}}
+        <b>{{i18n 'user.suspended_notice' date=user.suspendedTillDate}}</b><br>
+        <b>{{i18n 'user.suspended_reason'}}</b> {{user.suspend_reason}}
+      </div>
+    {{else}}
+      {{#if user.bio_cooked}}<div class='bio'>{{text-overflow class="overflow" text=user.bio_excerpt}}</div>{{/if}}
+    {{/if}}
+
+   
 
 <div id="grace">
     {{#if user}}
