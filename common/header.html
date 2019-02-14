@@ -519,6 +519,7 @@
       </div>
     {{/if}}
 
+<div id="grace">
     {{#if user}}
       {{#unless user.profile_hidden}}
         <div class="metadata">
@@ -550,6 +551,7 @@
       {{plugin-outlet name="user-card-after-metadata" args=(hash user=user)}}
 
     {{/if}}
+  </div>
 
 
     {{#if publicUserFields}}
