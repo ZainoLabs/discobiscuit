@@ -5,7 +5,9 @@
 }
 
 .card-content {
-    display: none;
+    .has-traffic {
+        display: none;
+    }
 }
 
 /* User Card Name Grouping */
