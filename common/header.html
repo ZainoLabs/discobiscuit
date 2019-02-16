@@ -369,11 +369,6 @@
                 <th>&nbsp;</th>
                <span>foo</span>
               </thead>
-              <tbody>
-                {{#each model as |item|}}
-                  {{directory-item item=item showTimeRead=showTimeRead}}
-                {{/each}}
-              </tbody>
             </table>
 
             {{conditional-loading-spinner condition=model.loadingMore}}
