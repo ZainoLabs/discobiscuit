@@ -369,6 +369,11 @@
                 <th>&nbsp;</th>
                <span>foo</span>
               </thead>
+              <tbody>
+                {{#each model as |item|}}
+                  
+                {{/each}}
+              </tbody>
             </table>
 
             {{conditional-loading-spinner condition=model.loadingMore}}
