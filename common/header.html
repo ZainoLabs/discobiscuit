@@ -556,19 +556,7 @@
   </div>
 
 
-    {{#if publicUserFields}}
-      <div class="public-user-fields">
-        {{#each publicUserFields as |uf|}}
-          {{#if uf.value}}
-            <div class="public-user-field {{uf.field.dasherized_name}}">
-              <span class="user-field-name">{{uf.field.name}}:</span>
-              <span class="user-field-value">{{uf.value}}</span>
-            </div>
-          {{/if}}
-        {{/each}}
-      </div>
-    {{/if}}
-
+    
     {{plugin-outlet name="user-card-before-badges" args=(hash user=user)}}
 
     {{#if showBadges}}
