@@ -364,18 +364,6 @@
           {{#if model.length}}
             <div class='total-rows'>{{i18n "directory.total_rows" count=model.totalRows}}</div>
 
-            <table>
-              <thead>
-                <th>&nbsp;</th>
-               <span>foo</span>
-              </thead>
-              <tbody>
-                {{#each model as |item|}}
-                  {{directory-item item=item showTimeRead=showTimeRead}}
-                {{/each}}
-              </tbody>
-            </table>
-
             {{conditional-loading-spinner condition=model.loadingMore}}
           {{else}}
             <div class='clearfix'></div>
