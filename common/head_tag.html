@@ -118,16 +118,4 @@ api.registerConnectorClass('user-card-post-names', 'user-card-profile-customizat
     {{/if}}
 </script>
 
-<script type='text/x-handlebars' data-template-name='/connectors/user-card-post-names/user-card-profile-customization'>
-    {{#if iconicUserFields}}
-    <div class="iconic-user-fields">
-        {{#each iconicUserFields as |ic|}}
-        {{#if ic.icon}}
-        <a href="{{ic.href}}" rel="nofollow" target="_blank" title="{{ic.name}}"><i class="fab fa-{{ic.icon}}"></i></a>
-        {{/if}}
-        {{/each}}
-    </div>
-    {{/if}}
-    
-</script>
 
