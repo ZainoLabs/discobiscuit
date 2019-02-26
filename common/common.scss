@@ -460,3 +460,10 @@ body:not(.primary-group-adminos) .control-group.pref-title {
 body:not(.primary-group-adminos) .control-group.pref-auth-tokens {
   display: none;
 }
+
+/* ***** MISC ***** */
+
+body:not(.primary-group-adminos) section.about.stats {
+  display: none;
+}
+
