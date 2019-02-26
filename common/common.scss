@@ -403,6 +403,60 @@ body:not(.primary-group-adminos) #grace {
 
 /* Wizards */
 
-.wiz-onb1 {
-    background-color: #DA552F;
+/* hide User Preference links for non admins */
+
+/*body:not(.primary-group-adminos) .user-navigation .preferences-nav .nav-account {
+  display: none;
+}*/
+
+/*body:not(.primary-group-adminos) .user-navigation .preferences-nav .nav-profile {
+  display: none;
+}*/
+
+/* ***** STATS ***** */
+
+body:not(.primary-group-adminos) .stats-section {
+  display: none;
+}
+
+/* ***** PROFILE ***** */
+
+body:not(.primary-group-adminos) .control-group.pref-bio {
+  display: none;
+}
+
+body:not(.primary-group-adminos) .control-group.pref-location {
+  display: none;
+}
+
+body:not(.primary-group-adminos) .control-group.pref-website {
+  display: none;
+}
+
+body:not(.primary-group-adminos) .control-group.pref-bio {
+  display: none;
+}
+
+body:not(.primary-group-adminos) #grace {
+  display: none;
+}
+
+
+/* ***** ACCOUNT ***** */
+
+body:not(.primary-group-adminos) .control-group.pref-username {
+  display: none;
+}
+
+/*body:not(.primary-group-adminos) .control-group.pref-name {
+  display: none;
+}*/
+
+body:not(.primary-group-adminos) .control-group.pref-title {
+  display: none;
+}
+
+
+body:not(.primary-group-adminos) .control-group.pref-auth-tokens {
+  display: none;
 }
