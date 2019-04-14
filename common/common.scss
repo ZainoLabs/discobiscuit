@@ -471,3 +471,7 @@ body:not(.primary-group-adminos) section.about.stats {
   display: none;
 }
 
+/*experimental */
+
+html.anon section.about.stats { display: none; }
+
