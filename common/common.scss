@@ -475,3 +475,7 @@ body:not(.primary-group-adminos) section.about.stats {
 
 html.anon section.about.stats { display: none; }
 
+th.posts.sortable.num {
+    display: none;
+}
+
